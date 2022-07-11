@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@font-face {
+  font-family: 'DSEG14Modern-Bold';
+  src:  url('/assets/fonts/DSEG14-Modern/DSEG14Modern-Bold.woff2') format('woff2'),
+        url('/assets/fonts/DSEG14-Modern/DSEG14Modern-Bold.woff') format('woff'),
+        url('/assets/fonts/DSEG14-Modern/DSEG14Modern-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DSEG14ModernMini-BoldItalic';
+  src:  url('/assets/fonts/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.woff2') format('woff2'),
+        url('/assets/fonts/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.woff') format('woff'),
+        url('/assets/fonts/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.ttf') format('truetype');
+}
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url('/assets/background.jpg');
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.calculator-body {
+	box-shadow: 
+		inset 5px 5px 5px rgba(255,255,255,0.2),
+		inset -5px -5px 5px rgba(0,0,0,0.6);
+		border-width: 1px;
+	border-color:
+		rgba(255, 255, 255, 0.6)
+		rgba(0, 0, 0, 1)
+		rgba(0, 0, 0, 1)
+		rgba(255, 255, 255, 0.6);
+	height: 545px;
+	width: 500px;
+	display: grid;
+	grid-template-rows: 45px 100px 1fr;
+	grid-row-gap: 15px;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.9);
+	box-shadow: ;
+}
+
+.solar {
+	display: flex;
+	margin: 5px 5px 0 5px;
+	justify-content: space-between;
+}
+
+.panel {
+	width: 200px;
+	background: linear-gradient(
+		to right,
+		rgba(70, 30, 0, 1.0) 0% 32%,
+		rgba(0, 0, 0, 1.0) 0% 33%,
+		rgba(70, 30, 0, 1.0) 0% 64%,
+		rgba(0, 0, 0, 1.0) 0% 65%,
+		rgba(70, 30, 0, 1.0) 0% 100%);
+	border-radius: 5px;
+	box-shadow:
+		inset 3px 3px 3px rgba(0, 0, 0, 0.3),
+		inset -3px -3px 3px rgba(255, 255, 255, 0),
+		3px 3px 3px 1px rgba(255, 255, 255, 0.05),
+		-3px -3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+.name {
+	font-family: 'Righteous', cursive;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 30px;
+}
+
+.display {
+	display: grid;
+	margin: 5px;
+	grid-template-rows: 30px 60px;
+	background-color: rgba(120, 180, 100, 1.0);
+	border-radius: 5px;
+	box-shadow:
+		inset 3px 3px 3px rgba(0, 0, 0, 0.3),
+		inset -3px -3px 3px rgba(255, 255, 255, 0.1),
+		3px 3px 3px 1px rgba(255, 255, 255, 0.15),
+		-3px -3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.prevous-input-display {
+	display: flex;
+	align-items: center;
+	margin-inline: 5px;
+	justify-content: flex-end;
+	padding-top: 8px;
+	font-size: 20px;
+	font-family: 'DSEG14ModernMini-BoldItalic', Fallback, sans-serif;
+}
+
+.current-input-display {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-inline: 10px;
+	font-family: 'DSEG14Modern-Bold', Fallback, sans-serif;
+	font-size: 35px;
+	width: 15ch;
+	word-wrap: break-word;
+}
+
+.button-box {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 2fr 1fr;
+}
+
+.number-pad {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.operation-box {
+	display: grid;
+	grid-auto-columns: 1fr 1fr;
+	grid-auto-flow: column;
+}
+
+.primary-operations,
+.secondary-operations {
+	display: grid;
+}
+
+button {
+	font-family: 'Albert Sans', sans-serif;
+	font-size: 20px;
+	background-color: whitesmoke;
+	width: 82px;
+	margin: 5px;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color:
+		rgba(255, 255, 255, 1)
+		rgba(0, 0, 0, 0.4)
+		rgba(0, 0, 0, 0.4)
+		rgba(255, 255, 255, 1);
+	box-shadow:
+		-2px -2px 5px -3px rgba(255, 255, 255, 0.2),
+		5px 5px 5px 2px rgba(0, 0, 0, 0.6);
+	transition: 100ms;
+	cursor: pointer;
+}
+
+button:active {
+	transform: scale(0.98);
+	border-color:
+		rgba(255, 255, 255, 1)
+		rgba(0, 0, 0, 0.4)
+		rgba(0, 0, 0, 0.4)
+		rgba(255, 255, 255, 1);
+	box-shadow:
+		2px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+button[name="clear"] {
+	font-size: 17px;
+	background-color: rgba(255, 150, 50, 1.0);
+	border-color:
+		rgba(255, 255, 255, 0.2)
+		rgba(0, 0, 0, 0.5)
+		rgba(0, 0, 0, 0.5)
+		rgba(255, 255, 255, 0.2);
+}
+
+button[name="equals"] {
+	background-color: rgba(100, 210, 140, 1);
+	border-color:
+		rgba(255, 255, 255, 0.2)
+		rgba(0, 0, 0, 0.5)
+		rgba(0, 0, 0, 0.5)
+		rgba(255, 255, 255, 0.2);
+}
+
+button[name="back"], button[name="."] {
+	font-size: 16px;
+	background-color: rgba(180, 180, 180, 1);
+	border-color:
+		rgba(255, 255, 255, 0.2)
+		rgba(0, 0, 0, 0.5)
+		rgba(0, 0, 0, 0.5)
+		rgba(255, 255, 255, 0.2);
+}
+
+button[name="."] {
+	font-size: 20px;
+}
+
+button[data-operation] {
+	color: whitesmoke;
+	background-color: rgba(50, 50, 50, 1.0);
+	border-color:
+		rgba(255, 255, 255, 0.1)
+		rgba(0, 1, 0, 0.6)
+		rgba(0, 1, 0, 0.6)
+		rgba(255, 255, 255, 0.1);
+}

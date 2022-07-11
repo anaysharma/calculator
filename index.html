@@ -9,34 +9,40 @@
 </head>
 <body>
 	<div class="calculator-body">
-		<div class="display"></div>
+		<div class="solar">
+			<div class="panel"></div>
+			<div class="name">Anay®</div>
+		</div>
+		<div class="display">
+			<div class="prevous-input-display" data-previous-input ></div>
+			<div class="current-input-display" data-current-input ></div>
+		</div>
 		<div class="button-box">
 			<div class="number-pad">
-				<button name="1" type="submit" value="1">1</button>
-				<button name="2" type="submit" value="2">2</button>
-				<button name="3" type="submit" value="3">3</button>
-				<button name="4" type="submit" value="4">4</button>
-				<button name="5" type="submit" value="5">5</button>
-				<button name="6" type="submit" value="6">6</button>
-				<button name="7" type="submit" value="7">7</button>
-				<button name="8" type="submit" value="8">8</button>
-				<button name="9" type="submit" value="9">9</button>
-				<button name="." type="submit" value=".">.</button>
-				<button name="0" type="submit" value="0">0</button>
-				<button name="back" type="submit" value="back">⌫</button>
+				<button name="1" type="submit" value="1" data-number>1</button>
+				<button name="2" type="submit" value="2" data-number>2</button>
+				<button name="3" type="submit" value="3" data-number>3</button>
+				<button name="4" type="submit" value="4" data-number>4</button>
+				<button name="5" type="submit" value="5" data-number>5</button>
+				<button name="6" type="submit" value="6" data-number>6</button>
+				<button name="7" type="submit" value="7" data-number>7</button>
+				<button name="8" type="submit" value="8" data-number>8</button>
+				<button name="9" type="submit" value="9" data-number>9</button>
+				<button name="." type="submit" value="." data-number>.</button>
+				<button name="0" type="submit" value="0" data-number>0</button>
+				<button name="back" type="submit" value="back" data-delete>⌫</button>
 			</div>
 			<div class="operation-box">
 				<div class="primary-operations">
-					<button name="add" type="submit" value="add">+</button>
-					<button name="subtract" type="submit" value="subtract">-</button>
-					<button name="multiply" type="submit" value="multiply">×</button>
-					<button name="divide" type="submit" value="divide">÷</button>
+					<button name="add" type="submit" value="add" data-operation>+</button>
+					<button name="subtract" type="submit" value="subtract" data-operation>-</button>
+					<button name="multiply" type="submit" value="multiply" data-operation>×</button>
+					<button name="divide" type="submit" value="divide" data-operation>÷</button>
 				</div>
 				<div class="secondary-operations">
-					<button name="clear" type="submit" value="clear">AC</button>
-					<button name="equals" type="submit" value="equal">=</button>
+					<button name="clear" type="submit" value="clear" data-clear>AC</button>
+					<button name="equals" type="submit" value="equal" data-equals>=</button>
 				</div>
-
 			</div>
 		</div>
 	</div>
