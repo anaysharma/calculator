@@ -107,7 +107,7 @@ body {
 	margin-inline: 10px;
 	font-family: 'DSEG14Modern-Bold', Fallback, sans-serif;
 	font-size: 35px;
-	width: 15ch;
+	width: auto;
 	word-wrap: break-word;
 }
 
