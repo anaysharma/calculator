@@ -21,16 +21,18 @@
 }
 
 body {
-	background:  linear-gradient(to right, rgba(100, 255, 150, 1.0), rgba(100, 150, 255, 1.0));
+	background:  linear-gradient(to bottom right, #38efbb, #11998e);
 	height: 100vh;
+	width: 100vw;
+	font-size: 1rem;
 	display: grid;
 	place-items: center;
 }
 
 .calculator-body {
 	box-shadow: 
-		10px 20px 40px rgba(0, 0, 0, 0.6),
-		inset 5px 5px 5px rgba(255,255,255,0.2),
+		15px 15px 30px black,
+		inset 5px 5px 5px rgba(220,220,255,0.2),
 		inset -5px -5px 5px rgba(0,0,0,0.6);
 		border-width: 1px;
 	border-color:
@@ -38,20 +40,18 @@ body {
 		rgba(0, 0, 0, 1)
 		rgba(0, 0, 0, 1)
 		rgba(255, 255, 255, 0.6);
-	height: 545px;
+	height: 600px;
 	width: 500px;
 	display: grid;
-	grid-template-rows: 45px 100px 1fr;
-	grid-row-gap: 15px;
-	padding: 20px;
-	border-radius: 24px;
-	background-color: rgba(0, 0, 0, 0.9);
-	box-shadow: ;
+	grid-template-rows: 1fr 3fr 10fr;
+	grid-row-gap: 20px;
+	padding: 25px;
+	border-radius: 20px;
+	background-color: hsl(200, 10%, 10%);
 }
 
 .solar {
 	display: flex;
-	margin: 5px 5px 0 5px;
 	justify-content: space-between;
 }
 
@@ -64,13 +64,14 @@ body {
 		rgba(70, 30, 0, 1.0) 0% 64%,
 		rgba(40, 10, 0, 1.0) 0% 65%,
 		rgba(70, 30, 0, 1.0) 0% 100%);
-	border-radius: 5px;
+	border-radius: 10px;
 	box-shadow:
 		inset 3px 3px 3px rgba(0, 0, 0, 0.3),
 		inset -3px -3px 3px rgba(255, 255, 255, 0),
 		3px 3px 3px 1px rgba(255, 255, 255, 0.05),
 		-3px -3px 3px 1px rgba(0, 0, 0, 0.3);
 }
+
 .name {
 	font-family: 'Righteous', cursive;
 	color: rgba(255, 255, 255, 0.6);
@@ -79,10 +80,9 @@ body {
 
 .display {
 	display: grid;
-	margin: 5px;
-	grid-template-rows: 30px 60px;
+	grid-template-rows: 1fr 2fr;
 	background-color: rgba(100, 170, 100, 1.0);
-	border-radius: 5px;
+	border-radius: 10px;
 	box-shadow:
 		inset 3px 3px 3px rgba(0, 0, 0, 0.3),
 		inset -3px -3px 3px rgba(255, 255, 255, 0.04),
@@ -96,7 +96,7 @@ body {
 	margin-inline: 5px;
 	justify-content: flex-end;
 	padding-top: 8px;
-	font-size: 20px;
+	font-size: 1em;
 	font-family: 'DSEG14ModernMini-BoldItalic', Fallback, sans-serif;
 }
 
@@ -106,7 +106,7 @@ body {
 	justify-content: flex-end;
 	margin-inline: 10px;
 	font-family: 'DSEG14Modern-Bold', Fallback, sans-serif;
-	font-size: 35px;
+	font-size: 2em;
 	width: auto;
 	word-wrap: break-word;
 }
@@ -114,32 +114,37 @@ body {
 .button-box {
 	display: grid;
 	grid-auto-flow: column;
-	grid-auto-columns: 2fr 1fr;
+	grid-auto-columns: 3fr 2fr;
+	gap: 10px;
 }
 
 .number-pad {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
 }
 
 .operation-box {
 	display: grid;
 	grid-auto-columns: 1fr 1fr;
 	grid-auto-flow: column;
+	gap: 10px;
 }
 
 .primary-operations,
 .secondary-operations {
 	display: grid;
+	gap: 10px;
 }
 
 button {
 	font-family: 'Albert Sans', sans-serif;
-	font-size: 20px;
+	font-size: 1.8em;
 	background-color: whitesmoke;
-	width: 82px;
-	margin: 5px;
-	border-radius: 5px;
+	background-image: linear-gradient(to bottom right, #a0a8af, #ffffff);
+	border-radius: 10px;
 	border-width: 1px;
 	border-color:
 		rgba(255, 255, 255, 1)
@@ -154,19 +159,14 @@ button {
 }
 
 button:active {
-	transform: scale(0.98);
-	border-color:
-		rgba(255, 255, 255, 1)
-		rgba(0, 0, 0, 0.4)
-		rgba(0, 0, 0, 0.4)
-		rgba(255, 255, 255, 1);
-	box-shadow:
-		2px 3px 5px rgba(0, 0, 0, 0.6);
+	transform: scale(0.96);
+	box-shadow:	2px 3px 5px rgba(0, 0, 0, 0.6);
 }
 
 button[name="clear"] {
-	font-size: 17px;
-	background-color: rgba(255, 150, 50, 1.0);
+	font-size: 1.4em;
+	background-color: hsl(29, 100%, 60%);
+	background-image: linear-gradient(to bottom right, hsl(30, 70%, 45%), hsl(30, 100%, 70%));
 	border-color:
 		rgba(255, 255, 255, 0.2)
 		rgba(0, 0, 0, 0.5)
@@ -175,7 +175,7 @@ button[name="clear"] {
 }
 
 button[name="equals"] {
-	background-color: rgba(100, 210, 140, 1);
+	background-image: linear-gradient(to bottom right, hsl(152, 40%, 40%), hsl(142, 70%, 70%));
 	border-color:
 		rgba(255, 255, 255, 0.2)
 		rgba(0, 0, 0, 0.5)
@@ -184,25 +184,42 @@ button[name="equals"] {
 }
 
 button[name="back"], button[name="."] {
-	font-size: 16px;
-	background-color: rgba(180, 180, 180, 1);
+	/* font-size: 1.2em; */
+	background-image: linear-gradient(to bottom right, hsl(0, 0%, 10%), hsl(0, 0%, 20%));
 	border-color:
 		rgba(255, 255, 255, 0.2)
 		rgba(0, 0, 0, 0.5)
 		rgba(0, 0, 0, 0.5)
 		rgba(255, 255, 255, 0.2);
-}
-
-button[name="."] {
-	font-size: 20px;
+	color: #ffffffc0;
 }
 
 button[data-operation] {
 	color: whitesmoke;
-	background-color: rgba(50, 50, 50, 1.0);
+	background-image: linear-gradient(to bottom right, hsl(200, 40%, 40%), hsl(200, 60%, 60%));
 	border-color:
 		rgba(255, 255, 255, 0.1)
 		rgba(0, 1, 0, 0.6)
 		rgba(0, 1, 0, 0.6)
 		rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 500px) {
+	body {
+		font-size: 0.8rem;
+	}
+	.calculator-body {
+		height: 500px;
+		width: 400px;
+	}
+}
+
+@media (max-width: 398px) {
+	body {
+		font-size: 0.7rem;
+	}
+	.calculator-body {
+		height: 460px;
+		width: 340px;
+	}
 }
