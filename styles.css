@@ -36,25 +36,25 @@ body {
 		inset 2px 2px 2px rgba(220,220,255,0.2),
 		inset -2px -2px 2px rgba(0,0,0,0.6),
 		1px 1px 1px #00000016,
-		2px 2px 2px #00000016,
-		3px 3px 3px #00000016,
-		4px 4px 4px #00000016,
-		5px 5px 5px #00000016,
-		6px 6px 6px #00000016,
-		7px 7px 7px #00000016,
-		8px 8px 8px #00000016,
-		9px 9px 9px #00000016,
-		10px 10px 10px #00000016,
-		11px 11px 11px #00000016,
-		12px 12px 12px #00000016,
-		13px 13px 13px #00000016,
-		14px 14px 14px #00000016,
-		15px 15px 15px #00000016,
-		16px 16px 16px #00000016,
-		17px 17px 17px #00000016,
-		18px 18px 18px #00000016,
-		19px 19px 19px #00000016,
-		20px 20px 20px #00000016;
+		2px 2px 1px #00000016,
+		3px 3px 2px #00000016,
+		4px 4px 2px #00000016,
+		5px 5px 3px #00000016,
+		6px 6px 3px #00000016,
+		7px 7px 4px #00000016,
+		8px 8px 4px #00000016,
+		9px 9px 5px #00000016,
+		10px 10px 5px #00000016,
+		11px 11px 6px #00000016,
+		12px 12px 6px #00000016,
+		13px 13px 7px #00000016,
+		14px 14px 7px #00000016,
+		15px 15px 8px #00000016,
+		16px 16px 8px #00000016,
+		17px 17px 9px #00000016,
+		18px 18px 9px #00000016,
+		19px 19px 10px #00000016,
+		20px 20px 10px #00000016;
 	border-width: 1px;
 	border-color:
 		rgba(255, 255, 255, 0.6)
@@ -185,7 +185,6 @@ button:active {
 }
 
 button[name="clear"] {
-	font-size: 1.4em;
 	background-color: hsl(29, 100%, 60%);
 	background-image: linear-gradient(to bottom right, hsl(30, 70%, 45%), hsl(30, 100%, 70%));
 	border-color:
