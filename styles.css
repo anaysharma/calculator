@@ -1,16 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 @font-face {
-  font-family: 'DSEG14Modern-Bold';
-  src:  url('/assets/fonts/DSEG14-Modern/DSEG14Modern-Bold.woff2') format('woff2'),
-        url('/assets/fonts/DSEG14-Modern/DSEG14Modern-Bold.woff') format('woff'),
-        url('/assets/fonts/DSEG14-Modern/DSEG14Modern-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'DSEG14ModernMini-BoldItalic';
-  src:  url('/assets/fonts/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.woff2') format('woff2'),
-        url('/assets/fonts/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.woff') format('woff'),
-        url('/assets/fonts/DSEG14-Modern-MINI/DSEG14ModernMini-BoldItalic.ttf') format('truetype');
+  font-family: 'DB LCD';
+  src: url('/assets/fonts/DB_LCD_Temp-Black.ttf') format('truetype');
 }
 
 *,
@@ -117,8 +110,8 @@ body {
 	margin-inline: 5px;
 	justify-content: flex-end;
 	padding-top: 8px;
-	font-size: 1em;
-	font-family: 'DSEG14ModernMini-BoldItalic', Fallback, sans-serif;
+	font-size: 1.4em;
+	font-family: 'DB LCD';
 }
 
 .current-input-display {
@@ -126,8 +119,8 @@ body {
 	align-items: center;
 	justify-content: flex-end;
 	margin-inline: 10px;
-	font-family: 'DSEG14Modern-Bold', Fallback, sans-serif;
-	font-size: 2em;
+	font-family: 'DB LCD';
+	font-size: 3em;
 	width: auto;
 	word-wrap: break-word;
 }
